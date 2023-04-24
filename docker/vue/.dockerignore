@@ -1,0 +1,9 @@
+node_modules
+docker
+.gitignore
+README.md
+
+# comment
+*/temp*
+*/*/temp*
+temp?

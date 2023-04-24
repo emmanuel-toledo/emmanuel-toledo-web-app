@@ -1,0 +1,71 @@
+version: '3.8'
+services:
+  
+  node-angular: # Angular utility container
+    container_name: node-angular-container
+    image: node-angular:latest
+    build: 
+      context: ./
+      dockerfile: docker/angular/node.angular.dockerfile
+      args:
+        - ANGULAR_VERSION=latest
+        - WORKING_DIRECTORY=/home/node
+    volumes:
+      - ./angular.emmanuel.toledo.app:/home/node
+  
+  node-vue: # Vue utility container
+    container_name: node-vue-container
+    image: node-vue:latest
+    build: 
+      context: ./
+      dockerfile: docker/vue/node.vue.dockerfile
+      args:
+        - VUE_VERSION=latest
+    volumes:
+      - ./vue.emmanuel.toledo.app:/home/node
+
+##########################################################################################
+
+  app-angular: # Angular app container
+    container_name: app-angular-container
+    build: 
+      context: ./
+      dockerfile: docker/angular/app.dockerfile
+      args:
+        - WORKING_DIRECTORY=/home/node
+        - PROJECTNAME=angular.emmanuel.toledo.app
+    ports:
+      - '80:4200'
+    volumes:
+      - ./angular.emmanuel.toledo.app:/home/node
+      - angular-node-modules:/home/node # - /var/www/html/node_modules # Anonymous volume for production environment.
+
+  app-vue: # Vue app container
+    container_name: app-vue-container
+    build: 
+      context: ./
+      dockerfile: docker/vue/app.dockerfile
+      args:
+        - WORKING_DIRECTORY=app
+        - PROJECTNAME=vue.emmanuel.toledo.app
+    ports:
+      - '80:8080'
+    volumes:
+      - ./vue.emmanuel.toledo.app:app
+      - vue-node-modules:app # - /var/www/html/node_modules # Anonymous volume for production environment.
+
+##########################################################################################
+
+volumes:
+  angular-node-modules:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: "${PWD}/angular.emmanuel.toledo.app/node_modules"
+  vue-node-modules:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: "${PWD}/vue.emmanuel.toledo.app/node_modules"

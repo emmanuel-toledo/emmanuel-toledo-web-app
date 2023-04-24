@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  
+  node-vue: # Vue utility container
+    container_name: node-vue-container
+    image: node-vue:latest
+    build: 
+      context: ./
+      dockerfile: docker/vue/node.vue.dockerfile
+      args:
+        - VUE_VERSION=latest
+        - WORKING_DIRECTORY=/home/node
+    volumes:
+      - ./vue.emmanuel.toledo.app:/home/node
+
+  app-vue: # Vue app container
+    container_name: app-vue-container
+    build: 
+      context: ./
+      dockerfile: docker/vue/app.dockerfile
+      args:
+        - WORKING_DIRECTORY=/home/node
+        - PROJECTNAME=vue.emmanuel.toledo.app
+    ports:
+      - '80:8080'
+    volumes:
+      - ./vue.emmanuel.toledo.app:/home/node
+      - vue-node-modules:/home/node # - /var/www/html/node_modules # Anonymous volume for production environment.
+
+volumes:
+  vue-node-modules:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: "${PWD}/vue.emmanuel.toledo.app/node_modules"
