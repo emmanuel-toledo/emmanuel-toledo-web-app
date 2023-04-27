@@ -1,0 +1,153 @@
+/* Download Button Styles */
+.download-cv-button {
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 15px 45px;
+    border: 2px solid #CBCDCF;
+    cursor: pointer;
+    color: #3D4451;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.download-cv-button:focus {
+    outline: none;
+}
+
+.download-cv-button:active {
+    transform: scale(0.98);
+}
+
+.download-cv-button i {
+    margin-right: 10px;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 38px 50px;
+    border-radius: 13px;
+    background-color: var(--color-white);
+}
+
+.main-content .section-title {
+    margin: 0;
+    color: #3D4451;
+    position: relative;
+    font-size: var(--xxl-font-size);
+    font-weight: var(--semibold-font-weight);
+}
+
+.main-content .section-title::before {
+    content: '';
+    background-color: #2D4358;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 5px;
+    bottom: -10px;
+    border-radius: 13px;
+}
+
+.main-content .section-subtitle {
+    color: #3D4451;
+    margin-top: 30px;
+    font-size: var(--xl-font-size);
+    font-weight: var(--semibold-font-weight);
+}
+
+.main-content > section:not(:first-child) .section-title {
+    margin-top: 50px;
+}
+
+.section-container .section-title {
+    margin-bottom: 40px;
+}
+
+.section-container .section-subtitle {
+    margin-bottom: 25px;
+}
+
+/* About Me Styles */
+#about-me p {
+    color: #9DA0A7;
+    word-wrap: break-word;
+    font-size: var(--md-font-size);
+}
+
+/* What I'm Doing Styles */
+.process-card {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 30px;
+    word-wrap: break-word;
+    border-top-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border: 1px solid #CBCDCF;
+    background-color: #F6F7F9;
+}
+
+.process-card.first {
+    margin-right: 20px;
+}
+
+.process-card.last {
+    margin-left: 20px;
+}
+
+.process-card .title {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #3D4451;
+    font-size: var(--md-font-size);
+    font-weight: var(--semibold-font-weight);
+}
+
+.process-card .text {
+    margin: 0;
+    color: #9DA0A7;
+    font-size: var(--md-font-size);
+}
+
+.process-card .logo {
+    margin-right: 20px;
+}
+
+@media (max-width: 992px) {
+    .process-card.first {
+        margin-right: 0px;
+    }
+    
+    .process-card.last {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 450px) {
+    .process-card {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .process-card .logo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* References Styles */
+
+.reference-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    word-wrap: break-word;
+    border-radius: 13px;
+    border: 1px solid #CBCDCF;
+    background-color: #F6F7F9;    
+}
+
+
+
+
