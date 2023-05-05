@@ -1,0 +1,69 @@
+/* About Me Styles */
+#about-me .text {
+    color: #9DA0A7;
+    word-wrap: break-word;
+    font-size: var(--md-font-size);
+}
+
+/* What I'm Doing Styles */
+.process-card {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 30px;
+    word-wrap: break-word;
+    border: 1px solid #CBCDCF;
+    background-color: #F6F7F9;
+    height: calc(100% - 30px);
+}
+
+.process-card.first {
+    margin-right: 20px;
+    border-top-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+}
+
+.process-card.last {
+    margin-left: 20px;
+    border-top-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
+.process-card .title {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #3D4451;
+    font-size: var(--md-font-size);
+    font-weight: var(--semibold-font-weight);
+}
+
+.process-card .text {
+    margin: 0;
+    color: #9DA0A7;
+    font-size: var(--md-font-size);
+}
+
+.process-card .logo {
+    margin-right: 20px;
+}
+
+@media (max-width: 992px) {
+    .process-card.first {
+        margin-right: 0px;
+    }
+    
+    .process-card.last {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 450px) {
+    .process-card {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .process-card .logo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

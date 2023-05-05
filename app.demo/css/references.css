@@ -1,0 +1,115 @@
+/* .main-content > section:not(:first-child) .section-title {
+    margin-top: 50px;
+} */
+
+/* Employment References Styles */
+.references-container {
+    /* background-color: greenyellow; */
+    cursor: grab;
+    /* cursor: grabbing; */
+    display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.references-container::-webkit-scrollbar {
+    display: none;
+}
+
+.references-container .reference-card {
+    min-width: 50%;
+    margin-top: 80px;
+    margin-right: 40px;
+    background-color: #F6F7F9;
+    border: 1px solid #CBCDCF;
+    border-radius: 13px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    padding-bottom: 15px;
+}
+
+.reference-card .avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reference-card .comments-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    width: 30px;
+}
+
+.reference-card p {
+    margin: 0;
+}
+
+.reference-card .text {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    color: #9DA0A7;
+    font-size: var(--md-font-size);
+    font-weight: var(--normal-font-weight);
+}
+
+.reference-card .title {
+    margin-bottom: 5px;
+    columns: #3D4451;
+    font-size: var(--md-font-size);
+    font-weight: var(--semibold-font-weight);
+}
+
+.reference-card .job {
+    color: #136B81;
+    font-size: var(--sm-font-size);
+    font-weight: var(--light-font-weight);
+}
+
+.references-buttons-container {
+    /* background-color: red; */
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.references-buttons-container .button {
+    cursor: pointer;
+    border: none;
+    padding: 4px 20px;
+    margin-right: 10px;
+    border: 1px solid #CBCDCF;
+    border-radius: 4px;
+    color: #136B81;
+    background-color: #F6F7F9;
+}
+
+.references-buttons-container .button:active {
+    transform: scale(.98);
+}
+
+.references-buttons-container .button:focus {
+    outline: 0;
+}
+
+.references-buttons-container .button:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 991px) {
+    .references-container .reference-card {
+        min-width: 100%;
+    }
+}

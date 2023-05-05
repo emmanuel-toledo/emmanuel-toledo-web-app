@@ -1,0 +1,112 @@
+/* Let's stay in touch / Contact Styles */
+#contact-section {
+    margin-bottom: 40px;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container {
+    /* background-color: red; */
+    position: relative;
+    padding-left: 25px;
+}
+
+.control-container {
+    /* background-color: blue; */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-container .control {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 15px;
+    font-size: var(--md-font-size);
+    font-family: inherit;
+    background-color: #F6F7F9;
+    border: 1px solid #CBCDCF;
+}
+
+.control-container textarea.control {
+    padding-top: 15px;
+    height: auto;
+    resize: none;
+}
+
+.control-container .control:focus {
+    outline: none;
+    font-family: inherit;
+}
+
+.control-container .control::placeholder {
+    color: #9DA0A7;
+    font-size: var(--md-font-size);
+    font-weight: var(--normal-font-weight);
+}
+
+.form-container .button {
+    background-color: #14202E;
+    /* border: 1px solid #CBCDCF; */
+    border: none;
+    border-radius: 25px;
+    font-size: var(--md-font-size);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    width: 100%;
+}
+
+.form-container .button:active {
+    transform: scale(0.98);
+}
+
+.form-container .button i {
+    margin-right: 15px;
+    transform: translateY(5%);
+}
+
+.form-container .action-container {
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media (max-width: 991px) {
+    #contact-section .row .col-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .map-container {
+        height: 450px;
+        margin-bottom: 30px;
+    }
+
+    .form-container {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 380px) {
+    .form-container .button {
+        width: 100%;
+    }
+}

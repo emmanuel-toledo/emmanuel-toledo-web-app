@@ -1,0 +1,32 @@
+footer {
+    width: 100%;
+    margin-top: -40px;
+    padding: 25px 0;
+    background-color: var(--secondary-color);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer .social-media-container {
+    margin-bottom: 15px;
+}
+
+footer .social-media-container a {
+    font-size: var(--lg-font-size);
+    margin-right: 20px;
+    color: var(--color-white);
+}
+
+footer .social-media-container i:last-child {
+    margin-right: 0px;
+}
+
+footer .text {
+    margin: 0;
+    padding: 0;
+    color: var(--color-white);
+}
