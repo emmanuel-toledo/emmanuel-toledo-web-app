@@ -1,7 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap'); */
 
-/* Main configurations */
+:root {
+    --min-z-index: -1;
+    --max-z-index: 100;
+    --header-height: 360px;
+
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray: #f3f4f6;
+    --color-divider: #BDBDBD;
+    --color-contact: #9DA0A7;
+    --principal-color: #3D4451;
+    --principal-color-dark: #2D4358;
+    --secondary-color: #14202E;
+
+    --xxs-font-size: 10px;
+    --xs-font-size: 12px;
+    --sm-font-size: 14px;
+    --md-font-size: 16px;
+    --lg-font-size: 20px;
+    --xl-font-size: 24px;
+    --xxl-font-size: 26px;
+
+    --light-font-weight: 300;
+    --normal-font-weight: 400;
+    --semibold-font-weight: 600;
+    --bold-font-weight: 700;
+    --extrabold-font-weight: 800;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,72 +59,4 @@ header {
 p {
     font-size: var(--md-font-size);
     font-weight: var(--normal-font-weight);
-}
-
-/* Main classes */
-
-.section-title {
-    margin: 0;
-    margin-bottom: 40px;
-    color: var(--principal-color);
-    position: relative;
-    font-size: var(--xxl-font-size);
-    font-weight: var(--semibold-font-weight);
-}
-
-.section-title::before {
-    content: '';
-    background-color: var(--color-gray);
-    position: absolute;
-    display: block;
-    width: 250px;
-    height: 4px;
-    left: 0;
-    bottom: -10px;
-    border-radius: 15px;
-    z-index: 2;
-}
-
-.section-title::after {
-    content: '';
-    background-color: var(--principal-color-dark);
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 4px;
-    left: 0;
-    bottom: -10px;
-    border-radius: 15px;
-    z-index: 3;
-}
-
-.section-subtitle {
-    color: var(--principal-color);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: var(--xl-font-size);
-    font-weight: var(--semibold-font-weight);
-}
-
-/* Download Button Styles */
-.download-cv-button {
-    background-color: transparent;
-    border-radius: 12px;
-    padding: 15px 45px;
-    border: 2px solid #CBCDCF;
-    cursor: pointer;
-    color: #3D4451;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.download-cv-button:focus {
-    outline: none;
-}
-
-.download-cv-button:active {
-    transform: scale(0.98);
-}
-
-.download-cv-button i {
-    margin-right: 10px;
 }

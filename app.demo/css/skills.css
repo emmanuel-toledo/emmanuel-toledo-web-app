@@ -1,0 +1,68 @@
+/* Skill Styles */
+/* Percentage Bar Styles */
+
+/* #resume-section #programming-languages-skills .section-subtitle,
+#resume-section #web-development-skills .section-subtitle,
+#resume-section #supporting-feature-skills .section-subtitle {
+    margin: 25px 0px;
+} */
+
+/* .skills-container {
+    background-color: royalblue;
+} */
+
+.skills-container .skill {
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.skills-container .skill:last-child {
+    margin-bottom: 0px;
+}
+
+.skills-container .skill > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.skill .title, .skill .percentage {
+    margin: 0;
+}
+
+.skill .title {
+    font-size: var(--sm-font-size);
+    font-weight: var(--semibold-font-weight);
+}
+
+.skill .percentage {
+    font-size: var(--sm-font-size);
+    font-weight: var(--light-font-weight);
+}
+
+.skill .percentage-bar-container {
+    /* background-color: goldenrod; */
+    width: 100%;
+    height: 14px;
+    border: 1px solid #2D4358;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 2px;
+}
+
+.skill .percentage-bar-container .percentage-bar {
+    background-color: #2D4358;
+    height: 100%;
+    width: 0;
+    border-radius: 6px;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}
