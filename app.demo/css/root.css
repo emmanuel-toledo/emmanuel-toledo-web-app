@@ -1,7 +1,7 @@
 :root {
     --min-z-index: -1;
     --max-z-index: 100;
-    --header-height: 400px;
+    --header-height: 360px;
 
     --color-black: #000000;
     --color-white: #ffffff;
@@ -9,6 +9,7 @@
     --color-divider: #BDBDBD;
     --color-contact: #9DA0A7;
     --principal-color: #3D4451;
+    --principal-color-dark: #2D4358;
     --secondary-color: #14202E;
 
     
